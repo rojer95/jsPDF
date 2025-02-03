@@ -865,6 +865,14 @@ import { atob, btoa } from "../libs/AtobBtoa.js";
     return this;
   };
 
+  /**
+   * Clear Images Cache
+   *
+   */
+  jsPDFAPI.clearImages = function() {
+    this.internal.collections[namespace + "images"] = undefined;
+  };
+
   var processImageData = function(imageData, format, alias, compression) {
     var result, dataAsBinaryString;
 
